@@ -12,6 +12,8 @@
 		B6E069F51F32291900CCDA29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E069F31F32291900CCDA29 /* Main.storyboard */; };
 		B6E069F71F32291900CCDA29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E069F61F32291900CCDA29 /* Assets.xcassets */; };
 		B6E069FA1F32291900CCDA29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E069F81F32291900CCDA29 /* LaunchScreen.storyboard */; };
+		B6E06A021F32296200CCDA29 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E06A011F32296200CCDA29 /* GCDBlackBox.swift */; };
+		B6E06A041F32297700CCDA29 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E06A031F32297700CCDA29 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		B6E069F61F32291900CCDA29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6E069F91F32291900CCDA29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6E069FB1F32291900CCDA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6E06A011F32296200CCDA29 /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		B6E06A031F32297700CCDA29 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		B6E069EE1F32291900CCDA29 /* SleepingInTheLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				B6E06A031F32297700CCDA29 /* Constants.swift */,
+				B6E06A011F32296200CCDA29 /* GCDBlackBox.swift */,
 				B6E069EF1F32291900CCDA29 /* AppDelegate.swift */,
 				B6E069F11F32291900CCDA29 /* ViewController.swift */,
 				B6E069F31F32291900CCDA29 /* Main.storyboard */,
@@ -136,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E069F21F32291900CCDA29 /* ViewController.swift in Sources */,
+				B6E06A021F32296200CCDA29 /* GCDBlackBox.swift in Sources */,
 				B6E069F01F32291900CCDA29 /* AppDelegate.swift in Sources */,
+				B6E06A041F32297700CCDA29 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

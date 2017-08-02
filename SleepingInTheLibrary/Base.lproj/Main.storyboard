@@ -1,21 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SleepingInTheLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUY-bH-xq1">
+                                <rect key="frame" x="0.0" y="567" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="NvF-ua-SOc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="Get New Image"/>
+                                <connections>
+                                    <action selector="grabNewImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3F-sW-8Jb"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2eB-ox-4jA">
+                                <rect key="frame" x="0.0" y="80" width="375" height="447"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFY-Fp-l2A">
+                                <rect key="frame" x="0.0" y="527" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oCy-w1-NEM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleeping In The Library" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vla-9I-2Rs">
+                                <rect key="frame" x="0.0" y="40" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="n6E-Ne-PXq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2eB-ox-4jA" firstAttribute="top" secondItem="vla-9I-2Rs" secondAttribute="bottom" id="C8b-Mi-NzP"/>
+                            <constraint firstItem="vla-9I-2Rs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MQH-25-Q2m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2eB-ox-4jA" secondAttribute="trailing" id="MSF-LA-NYc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SUY-bH-xq1" secondAttribute="trailing" id="MW1-Ei-bEK"/>
+                            <constraint firstItem="SUY-bH-xq1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UWS-Ln-Frx"/>
+                            <constraint firstItem="EFY-Fp-l2A" firstAttribute="top" secondItem="2eB-ox-4jA" secondAttribute="bottom" id="VCS-gj-wOA"/>
+                            <constraint firstItem="EFY-Fp-l2A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WUT-pF-r2K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vla-9I-2Rs" secondAttribute="trailing" id="Yb0-j7-xZW"/>
+                            <constraint firstItem="vla-9I-2Rs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="avR-KS-F6p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SUY-bH-xq1" secondAttribute="bottom" constant="20" id="ijR-Xi-hhx"/>
+                            <constraint firstItem="SUY-bH-xq1" firstAttribute="top" secondItem="EFY-Fp-l2A" secondAttribute="bottom" id="kz2-dz-SXn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EFY-Fp-l2A" secondAttribute="trailing" id="nqL-H8-AD8"/>
+                            <constraint firstItem="2eB-ox-4jA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qL1-jN-MeM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="grabImageButton" destination="SUY-bH-xq1" id="ONh-hk-GMD"/>
+                        <outlet property="photoImageView" destination="2eB-ox-4jA" id="vtJ-ca-ug8"/>
+                        <outlet property="photoTitleLabel" destination="EFY-Fp-l2A" id="SO3-tr-WcC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -2,24 +2,46 @@
 //  ViewController.swift
 //  SleepingInTheLibrary
 //
-//  Created by gem on 8/2/17.
-//  Copyright © 2017 beau. All rights reserved.
+//  Created by Jarrod Parkes on 11/3/15.
+//  Copyright © 2015 Udacity. All rights reserved.
 //
 
 import UIKit
 
+// MARK: - ViewController: UIViewController
+
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    // MARK: Outlets
+    
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoTitleLabel: UILabel!
+    @IBOutlet weak var grabImageButton: UIButton!
+    
+    // MARK: Actions
+    
+    @IBAction func grabNewImage(_ sender: AnyObject) {
+        setUIEnabled(false)
+        getImageFromFlickr()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: Configure UI
+    
+    private func setUIEnabled(_ enabled: Bool) {
+        photoTitleLabel.isEnabled = enabled
+        grabImageButton.isEnabled = enabled
+        
+        if enabled {
+            grabImageButton.alpha = 1.0
+        } else {
+            grabImageButton.alpha = 0.5
+        }
     }
-
-
+    
+    // MARK: Make Network Request
+    
+    private func getImageFromFlickr() {
+        
+        // TODO: Write the network code here!
+    }
 }
-
